@@ -90,3 +90,4 @@
 
 ![GIF](https://github.com/Pranay-Pandey/Adobe-Resume-Generator/assets/79053599/4d393ce8-73ed-4e52-8ec4-2ff3af4093f4)
 
+To watch full demonstration click <a href = "https://github.com/Pranay-Pandey/Adobe-Resume-Generator/blob/main/demo.mp4">here</a>
