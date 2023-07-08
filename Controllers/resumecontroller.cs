@@ -21,8 +21,13 @@ namespace resumeapi.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError, Type = typeof(string))]
         [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(string))]
 
-        public IActionResult CreateEdit(Resume_info info)
+        public IActionResult GenerateResume(Resume_info info)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             pdfGeneration generator = new pdfGeneration(); // The class responsible for making PDF
             
             // to check if the template_id is valid or not
@@ -40,7 +45,7 @@ namespace resumeapi.Controllers
 
             catch (Exception ex)
             {
-                return StatusCode(500, "Internal Server Error");
+                return StatusCode(500, $"Internal Server Error: {ex.Message}");
             }
         }
     }

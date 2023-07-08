@@ -1,21 +1,33 @@
 ﻿// Schema for our Resume Info 
+using Adobe.PDFServicesSDK.core;
+using System.ComponentModel.DataAnnotations;
+
 namespace resumeapi.Models
 {
     public class Resume_info
     {
+        [Required(ErrorMessage = "Template ID is required.")]
         public string template_id { get; set; }
+
+        [Required(ErrorMessage = "Personal information is required.")]
         public personal_information personal_info { get; set; }
 
+        [Required(ErrorMessage = "Job title is required.")]
         public string job_title { get; set; }
 
+        [Required(ErrorMessage = "Career objective is required.")]
         public string career_objective { get; set; }
 
+        [Required(ErrorMessage = "Skills are required.")]
         public List<string> skills { get; set; }
 
+        [Required(ErrorMessage = "Education details are required.")]
         public List<Education> educations { get; set; }
 
+        [Required(ErrorMessage = "Experience details are required.")]
         public List<Experience> experiences { get; set; }
 
+        [Required(ErrorMessage = "Achievement details are required.")]
         public List<Achievement> achievements { get; set; }
     }
 
