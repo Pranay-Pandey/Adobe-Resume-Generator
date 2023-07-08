@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- using bootstrap CSS for easier formatting -->
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+    <div id="modal-overlay" class="modal-overlay">
+        <div class="modal-content">
+            <h3><center>Select your Resume Template</center></h3>
+            <div class="modal-numbers">
+                <!-- Since there are only three thumbnails hosting them is better. Can later
+                change the sources of the thumbnail to the database-->
+                <span class="modal-number" data-value="0">  
+                    <img src="https://i.postimg.cc/PrjRk4WR/Thumbnail1.png" alt="Image 1" width="300px" onclick="handleImageClick(this)">
+                </span>
+                <span class="modal-number" data-value="1">
+                    <img src="https://i.postimg.cc/XYvxVDpQ/Thumbnail3.png" alt="Image 2" width="300px" onclick="handleImageClick(this)">
+                </span>
+                <span class="modal-number" data-value="2">
+                    <img src="https://i.postimg.cc/GhKqn1h4/Thumbnail2.png" alt="Image 3" width="300px" onclick="handleImageClick(this)">
+                </span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <h1><center>Resume Builder</center></h1>
+        <form id="resumeForm">
+            <div class="field-container">
+                <div class="form-group">
+                    <label for="templateId">Template ID:</label>
+                    <input type="text" class="form-control" id="templateId" required>
+                </div>
+                <!-- Personal Information -->
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" class="form-control" id="lastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="text" class="form-control" id="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="linkedin">LinkedIn URL:</label>
+                    <input type="text" class="form-control" id="linkedin" required>
+                </div>
+            </div>
+
+            <div class="field-container">
+                <div class="form-group">
+                    <label for="jobTitle">Job Title:</label>
+                    <input type="text" class="form-control" id="jobTitle" required>
+                </div>
+                <div class="form-group">
+                    <label for="objective">Career Objective:</label>
+                    <textarea class="form-control" id="objective" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="skills">Skills (comma-separated):</label>
+                    <input type="text" class="form-control" id="skills" required>
+                </div>
+            </div>
+
+            <div class="field-container">
+                <!-- Education -->
+                <div class="form-group" id="educationGroup">
+                    <label>Education:</label>
+                    <div class="education-item">
+                        <input type="text" class="form-control" id="educationSchoolName" placeholder="School Name" required>
+                        <input type="text" class="form-control" id="educationYear" placeholder="Year" required>
+                        <input type="text" class="form-control" id="educationDescription" placeholder="Description" required>
+                        <button type="button" class="btn btn-danger remove-item">Remove</button>
+                    </div>
+                    <button type="button" class="btn btn-primary add-item" onclick="addEducationItem()">Add Education</button>
+                </div>
+            </div>
+
+            <div class="form-group field-container" id="experienceGroup">
+                <label>Experience:</label>
+                <div class="experience-item">
+                    <input type="text" class="form-control" id="experienceCompanyName" placeholder="Company Name" required>
+                    <input type="text" class="form-control" id="experienceYear" placeholder="Year" required>
+                    <textarea class="form-control" id="experienceDescription" placeholder="Description" rows="2" required></textarea>
+                    <button type="button" class="btn btn-danger remove-item">Remove</button>
+                </div>
+                <button type="button" class="btn btn-primary add-item" onclick="addExperienceItem()">Add Experience</button>
+            </div>
+
+            <div class="form-group field-container" id="achievementGroup" style="margin-top:15px;">
+                <label>Achievements:</label>
+                <div class="achievement-item">
+                    <input type="text" class="form-control" id="achievementType" placeholder="Type" required>
+                    <textarea class="form-control" id="achievementDescription" placeholder="Description" rows="2" required></textarea>
+                    <button type="button" class="btn btn-danger remove-item">Remove</button>
+                </div>
+                <button type="button" class="btn btn-primary add-item" onclick="addAchievementItem()">Add Achievement</button>
+            </div>
+            <center style="margin-top:20px;">
+                <button type="button" class="btn btn-primary" onclick="generateResume()">Generate</button>
+            </center>
+            
+            <div id="spinner" class="spinner"></div>
+        </form>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
