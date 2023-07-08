@@ -78,3 +78,15 @@
 
 
 ![image](https://github.com/Pranay-Pandey/Adobe-Resume-Generator/assets/79053599/30b37edf-8692-495c-aad5-b64f9565e272)
+<hr>
+
+![image](https://github.com/Pranay-Pandey/Adobe-Resume-Generator/assets/79053599/31469298-7868-442e-ac28-ba0583b938e7)
+<hr>
+
+![image](https://github.com/Pranay-Pandey/Adobe-Resume-Generator/assets/79053599/97902567-ddf5-4eca-a939-2f98cd384aa2)
+![image](https://github.com/Pranay-Pandey/Adobe-Resume-Generator/assets/79053599/e678633c-d91a-4e2f-816d-5529bf0c6d20)
+
+<hr>
+
+![GIF](https://github.com/Pranay-Pandey/Adobe-Resume-Generator/assets/79053599/4d393ce8-73ed-4e52-8ec4-2ff3af4093f4)
+
